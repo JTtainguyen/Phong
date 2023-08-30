@@ -4,18 +4,18 @@ function Body() {
   return (
     <div className="text-center">
       <div className="mb-5 pb-5 px-5">
-        <div class="text-center mb-5">
+        <div className="text-center mb-5">
           <img
             src="https://apihtm.trailer.work/v1/media/file/bsh-logo-final-01-a6fa.png"
             className="w-28 h-28 object-cover rounded-full border-4 shadow-lg border-white"
             alt=""
           />
-          <h1 class="font-bold text-2xl mt-5 uppercase text-yellow-300 header-body">
+          <h1 className="font-bold text-2xl mt-5 uppercase text-yellow-300 header-body">
             Đào Thị Vân
           </h1>
-          <p class="mt-2 text-white text-lg">Thành viên vàng</p>
-          <p class="mt-2 text-white">
-            <div class="text-center">
+          <p className="mt-2 text-white text-lg">Thành viên vàng</p>
+          <div className="mt-2 text-white">
+            <div className="text-center">
               <p>1. Phí mua thẻ: 100.000.000 VNĐ</p>
               <br></br>
 
@@ -74,15 +74,15 @@ function Body() {
               <p>đêm/năm.</p>
               <p></p>
             </div>
-          </p>
+          </div>
           <p className="mt-2 text-white text-xs">
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               role="img"
               viewBox="0 0 24 24"
-              class="-mt-1 text-yellow-300 mr-1"
+              className="-mt-1 text-yellow-300 mr-1"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ function Body() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               className="mr-1 -mt-1"
               height="1em"
@@ -121,7 +121,7 @@ function Body() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               className="mr-1 -mt-1"
               height="1em"
@@ -140,7 +140,7 @@ function Body() {
             <svg
               stroke="currentColor"
               fill="currentColor"
-              stroke-width="0"
+              strokeWidth="0"
               viewBox="0 0 512 512"
               className="mr-1 -mt-1"
               height="1em"

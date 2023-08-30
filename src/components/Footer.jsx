@@ -26,7 +26,7 @@ function Footer() {
                 <svg
                   stroke="currentColor"
                   fill="currentColor"
-                  stroke-width="0"
+                  strokeWidth="0"
                   viewBox="0 0 512 512"
                   className="text-gray-300"
                   height="24"
@@ -35,9 +35,9 @@ function Footer() {
                 >
                   <path
                     fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="48"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="48"
                     d="M184 112l144 144-144 144"
                   ></path>
                 </svg>
