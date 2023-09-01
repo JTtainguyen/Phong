@@ -1,80 +1,38 @@
 import React from 'react';
+import { useState, useEffect } from 'react';
 
 function Body() {
+  const [data, setData] = useState('');
+  const [htmlContent, setHtmlContent] = useState('');
+  const getData = async () => {
+    await fetch('https://mocki.io/v1/6b4e0ab5-57a3-4e04-a227-9a649667f690')
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data.data);
+        setHtmlContent(data.data.description);
+      })
+      .catch((error) => {
+        console.error('Fetch error:', error);
+      });
+  };
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <div className="text-center">
       <div className="mb-5 pb-5 px-5">
-        <div className="text-center mb-5">
+        <div className="text-center mb-5 text-white">
           <img
             src="https://apihtm.trailer.work/v1/media/file/bsh-logo-final-01-a6fa.png"
             className="w-28 h-28 object-cover rounded-full border-4 shadow-lg border-white"
             alt=""
+            id="logo-body"
           />
           <h1 className="font-bold text-2xl mt-5 uppercase text-yellow-300 header-body">
-            Đào Thị Vân
+            {data.name}
           </h1>
           <p className="mt-2 text-white text-lg">Thành viên vàng</p>
-          <div className="mt-2 text-white">
-            <div className="text-center">
-              <p>1. Phí mua thẻ: 100.000.000 VNĐ</p>
-              <br></br>
-
-              <p>2. Thời hạn thẻ: 02 Năm</p>
-              <br></br>
-              <p className="new-line">
-                3. Bay chuyến cố định (Bay treo): Không giới hạn chế độ
-              </p>
-              <br></br>
-              <p>4. Số chuyến bay tự do hàng năm: 05 chuyến</p>
-              <br></br>
-              <p>5. Số giờ bay mỗi chuyến: 02h chuyến</p>
-              <br></br>
-              <p>
-                6. Số chuyến bay chủ thẻ được tặng người thân hàng năm: 02
-                chuyến
-              </p>
-              <br></br>
-              <p>7. Số giờ bay mỗi chuyến tặng: 01h</p>
-              <br></br>
-              <p>8. Số lượng du khách mỗi chuyến bay tự do: 6- 12 Người.</p>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <br></br>
-              <p>QUYỀN LỢI GIA TĂNG:</p>
-              <br></br>
-              <p>
-                - Được ưu tiên đặt chuyến bay lịch vào mỗi ngày tổ chứ Lễ hội
-                bay kinh khí cầu: Không cần đặt trước.
-              </p>
-              <br></br>
-              <p>
-                - Miễn phí đồ uống, đồ ăn nhẹ, khăn lạnh khi bay: Được hưởng
-              </p>
-              <br></br>
-              <p>
-                - Tổ chức sinh nhật trên khinh khí cầu: Tặng bánh sinh nhật.
-              </p>
-              <br></br>
-              <p>
-                - Bảo vệ rủi ro tai nạn cá nhân với số tiền: 200.000.000 VNĐ.
-              </p>
-              <br></br>
-              <p>
-                - Giảm giá dịch vụ trà chiều ngắm hoàng hôn nghe Violin, Piano,
-                Ghita…: Giảm 20%.
-              </p>
-              <br></br>
-              <p>
-                - Tặng đêm nghỉ khách sạn 5 sao do King Sky tổ chức lễ hội
-                Festival cho chủ thẻ: 02
-              </p>
-              <br></br>
-              <p>đêm/năm.</p>
-              <p></p>
-            </div>
-          </div>
+          <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
           <p className="mt-2 text-white text-xs">
             <svg
               stroke="currentColor"

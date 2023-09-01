@@ -304,7 +304,7 @@ video {
 }
 
 .w-28 {
-  width: 104px;
+  width: 7rem;
 }
 
 .shadow-lg {
@@ -321,7 +321,11 @@ video {
 }
 
 .h-28 {
-  height: 104px;
+  height: 7rem;
+}
+
+#logo-body {
+  box-sizing: border-box;
 }
 
 .border-4 {
